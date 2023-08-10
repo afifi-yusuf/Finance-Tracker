@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TabPane?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #485057#485057 #485057#485057 #485057#485057 #485057#485057;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.CS_IA_2.Recurring">
+    <center>
+        <AnchorPane onDragDetected="#setMonthLabel" onDragDone="#setMonthLabel" onDragDropped="#setMonthLabel" onDragEntered="#setMonthLabel" onMouseDragged="#setMonthLabel" onMouseExited="#setMonthLabel" onMouseMoved="#setMonthLabel" onMousePressed="#setMonthLabel" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+    <top>
+        <AnchorPane onContextMenuRequested="#setMonthLabel" onDragDetected="#setMonthLabel" onDragDone="#setMonthLabel" onDragDropped="#setMonthLabel" onDragEntered="#setMonthLabel" onDragExited="#setMonthLabel" onDragOver="#setMonthLabel" onInputMethodTextChanged="#setMonthLabel" onKeyPressed="#setMonthLabel" onKeyReleased="#setMonthLabel" onKeyTyped="#setMonthLabel" onMouseDragEntered="#setMonthLabel" onMouseDragExited="#setMonthLabel" onMouseDragOver="#setMonthLabel" onMouseDragReleased="#setMonthLabel" onTouchMoved="#setMonthLabel" onTouchPressed="#setMonthLabel" onTouchReleased="#setMonthLabel" onTouchStationary="#setMonthLabel" prefHeight="122.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <TabPane prefHeight="412.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Revenues">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button fx:id="backButton" layoutX="6.0" layoutY="335.0" mnemonicParsing="false" onAction="#back" prefHeight="0.0" prefWidth="51.0" style="-fx-background-color: #3f4245#3f4245 #3f4245#3f4245;" text="Back" textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="12.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="223.0" text="RECURRING INCOME" textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="154.0" layoutY="118.0" text="Amount: " textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField layoutX="256.0" layoutY="119.0" prefHeight="26.0" prefWidth="140.0" />
+                                        <Label layoutX="154.0" layoutY="191.0" text="Category: " textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="20.0" />
+                                            </font>
+                                        </Label>
+
+                                        <ChoiceBox fx:id="revenueCategory" layoutX="255.0" layoutY="191.0" prefHeight="4.0" prefWidth="142.0" />
+                                        <Button layoutX="351.0" layoutY="243.0" minWidth="43.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="43.0" style="-fx-background-color: #3f4245#3f4245 #3f4245#3f4245 #3f4245#3f4245 #3f4245#3f4245;" text="Add" textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="12.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Expenses">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button fx:id="backButton2" layoutX="6.0" layoutY="335.0" mnemonicParsing="false" onAction="#back" prefHeight="0.0" prefWidth="51.0" style="-fx-background-color: #3f4245#3f4245 #3f4245#3f4245 #3f4245#3f4245 #3f4245#3f4245;" text="Back" textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="12.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="227.0" text="RECURRING COSTS" textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="154.0" layoutY="118.0" text="Amount:" textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="154.0" layoutY="191.0" text="Category:" textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField layoutX="256.0" layoutY="119.0" prefHeight="26.0" prefWidth="140.0" />
+                                        <ChoiceBox fx:id="expenseCategory" layoutX="255.0" layoutY="191.0" prefWidth="142.0" />
+                                        <Button layoutX="351.0" layoutY="243.0" minWidth="43.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="43.0" style="-fx-background-color: #3f4245#3f4245 #3f4245#3f4245 #3f4245#3f4245 #3f4245#3f4245;" text="Add" textFill="WHITE">
+                                            <font>
+                                                <Font name="Futura Medium" size="12.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </top>
+</BorderPane>
